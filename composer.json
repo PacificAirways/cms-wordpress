@@ -9,16 +9,16 @@
             "email": "it@pacificairways.net"
         }
     ],
+    "require": {
+        "pacificairways/interfaces": "dev-master",
+        "guzzlehttp/guzzle": "^6.3"
+    },
     "repositories": [
         {
             "type": "vcs",
             "url": "https://github.com/PacificAirways/interfaces"
         }
     ],
-    "require": {
-        "pacificairways/interfaces": "dev-master",
-        "guzzlehttp/guzzle": "^6.3"
-    },
     "autoload": {
         "psr-4": {
             "Pacificairways\\Cms\\Wordpress\\": "src/"
