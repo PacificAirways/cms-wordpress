@@ -12,7 +12,7 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/PacificAirways/Interfaces"
+            "url": "https://github.com/PacificAirways/interfaces"
         }
     ],
     "require": {
