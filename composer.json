@@ -1,0 +1,27 @@
+{
+    "name": "pacificairways/cms-wordpress",
+    "description": "Library to fetch page content from Wordpress Rest Api",
+    "type": "library",
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "Matthew Butterworth",
+            "email": "it@pacificairways.net"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/PacificAirways/Interfaces"
+        }
+    ],
+    "require": {
+        "pacificairways/interfaces": "dev-master",
+        "guzzlehttp/guzzle": "^6.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Pacificairways\\Cms\\Wordpress\\": "src/"
+        }
+    }
+}
