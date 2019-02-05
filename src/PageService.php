@@ -38,7 +38,7 @@ class PageService implements PageServiceInterface
             throw new ContentNotFoundException('Content not found');
         }
 
-        $content = json_decode($response);
+        $content = json_decode($response, true);
         if (count($content) === 0 || !isset($content[0]['content']['rendered'])) {
             throw new ContentNotFoundException('Content not found');
         }
