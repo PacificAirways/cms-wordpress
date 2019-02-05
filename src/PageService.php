@@ -1,7 +1,8 @@
 <?php namespace Pacificairways\Cms\Wordpress;
 
 use GuzzleHttp\ClientInterface;
-use Pacificairways\Interfaces\Cms\PageInterface;
+use GuzzleHttp\Exception\GuzzleException;
+use Pacificairways\Interfaces\Cms\Exception\ContentNotFoundException;
 use Pacificairways\Interfaces\Cms\PageServiceInterface;
 
 class PageService implements PageServiceInterface
@@ -24,10 +25,24 @@ class PageService implements PageServiceInterface
     /**
      * @param string $slug
      *
-     * @return PageInterface
+     * @return Page
+     * @throws ContentNotFoundException
      */
     public function getBySlug($slug)
     {
-        return $this->httpClient->request('GET', $slug);
+        try {
+            $response = $this->httpClient
+                ->request('GET', '?slug=' . $slug)
+                ->getBody()->getContents();
+        } catch (GuzzleException $e) {
+            throw new ContentNotFoundException('Content not found');
+        }
+
+        $content = json_decode($response);
+        if (count($content) === 0 || !isset($content[0]['content']['rendered'])) {
+            throw new ContentNotFoundException('Content not found');
+        }
+
+        return Page::create($content[0]['content']['rendered']);
     }
 }

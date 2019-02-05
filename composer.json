@@ -11,7 +11,8 @@
     ],
     "require": {
         "pacificairways/interfaces": "dev-master",
-        "guzzlehttp/guzzle": "^6.3"
+        "guzzlehttp/guzzle": "^6.3",
+        "ext-json": "*"
     },
     "repositories": [
         {
