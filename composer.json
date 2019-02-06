@@ -10,7 +10,7 @@
         }
     ],
     "require": {
-        "pacificairways/interfaces": "dev-master",
+        "pacificairways/interfaces": "^0.1",
         "guzzlehttp/guzzle": "^6.3",
         "ext-json": "*"
     },

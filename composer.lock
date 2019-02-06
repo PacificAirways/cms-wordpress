@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9060ae0fee26927b5a0e091166eb5f22",
+    "content-hash": "3ad708db725ca653a74ecd1ff2941f34",
     "packages": [
         {
             "name": "guzzlehttp/guzzle",
@@ -191,16 +191,16 @@
         },
         {
             "name": "pacificairways/interfaces",
-            "version": "dev-master",
+            "version": "0.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PacificAirways/Interfaces.git",
-                "reference": "7347f3c6be18e44ec99c6d8af1a57d38db285e9d"
+                "reference": "6d720990d464e1d5bf74b16bb67b725b3bc7a7ce"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PacificAirways/Interfaces/zipball/7347f3c6be18e44ec99c6d8af1a57d38db285e9d",
-                "reference": "7347f3c6be18e44ec99c6d8af1a57d38db285e9d",
+                "url": "https://api.github.com/repos/PacificAirways/Interfaces/zipball/6d720990d464e1d5bf74b16bb67b725b3bc7a7ce",
+                "reference": "6d720990d464e1d5bf74b16bb67b725b3bc7a7ce",
                 "shasum": ""
             },
             "type": "library",
@@ -223,7 +223,7 @@
                 "source": "https://github.com/PacificAirways/Interfaces/tree/master",
                 "issues": "https://github.com/PacificAirways/Interfaces/issues"
             },
-            "time": "2019-02-02T00:19:37+00:00"
+            "time": "2019-02-05T21:20:21+00:00"
         },
         {
             "name": "psr/http-message",
@@ -319,11 +319,11 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "pacificairways/interfaces": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
+    "platform": {
+        "ext-json": "*"
+    },
     "platform-dev": []
 }
