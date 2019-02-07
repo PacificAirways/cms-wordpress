@@ -35,7 +35,7 @@ class PageService implements PageServiceInterface
                 ->request('GET', '?slug=' . $slug)
                 ->getBody()->getContents();
         } catch (GuzzleException $e) {
-            throw new ContentNotFoundException('Content not found');
+            throw new ContentNotFoundException('Content not found: ' . $e->getMessage());
         }
 
         $content = json_decode($response, true);
